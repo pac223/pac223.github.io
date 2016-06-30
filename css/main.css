@@ -1,0 +1,182 @@
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  overflow: auto;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+html, .main {
+  background-color: rgb(68, 67, 73);
+}
+
+.main {
+  min-height: 100%
+}
+
+.dust {
+  background-image: url("/images/dust.png");
+  animation: animatedBG 40s linear infinite;
+}
+
+@keyframes animatedBG {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100vh;
+  }
+}
+
+.info-column {
+  position: relative;
+  width: 500px;
+  padding: 25px;
+  margin-left: 10%;
+  background-color: #f2f4f4;
+  background-image: url("/images/paper.png");
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 624px) {
+  /*
+   *   Have this scaling occur over the range 625px -> 500px.
+   *   Scale the width from 500px -> 450px (80% -> 90%)
+   *   Center the main info column.
+   */
+  .info-column {
+    width: calc(500px - (625px - 100vw)*(50/125));
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 499px) {
+  .info-column {
+    width: 90%;
+  }
+}
+
+.info-header {
+  text-align: center;
+  font-size: 110px;
+  letter-spacing: 5px;
+  font-family: 'Amatic SC', serif;
+  white-space: nowrap;
+  color: #37344b;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.social-row {
+  height: 35px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.social-icon {
+  display: inline-block;
+  height: 35px;
+  width: 40px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: #626065;
+  cursor: pointer;
+}
+
+.social-icon:last-child {
+  margin-right: 0;
+}
+
+.social-icon:hover {
+  background-color: #959398;
+}
+
+.icon-picture {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon-mail > .icon-picture {
+  background-image: url("/images/icon_mail.svg");
+}
+
+.icon-linkedin > .icon-picture {
+  background-image: url("/images/icon_linkedin.svg");
+}
+
+.icon-quora > .icon-picture {
+  background-image: url("/images/icon_quora.svg");
+}
+
+.icon-instagram > .icon-picture {
+  background-image: url("/images/icon_instagram.svg");
+}
+
+.icon-twitter > .icon-picture {
+  background-image: url("/images/icon_twitter.svg");
+}
+
+.icon-goodreads > .icon-picture {
+  background-image: url("/images/icon_goodreads.svg");
+}
+
+.info-row {
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.info-row.glyph:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.info-row.glyph-work:before {
+  background-image: url("/images/glyph_work.svg");
+}
+
+.info-row.glyph-marker:before {
+  background-image: url("/images/glyph_marker.svg");
+}
+
+.info-row.glyph-school:before {
+  background-image: url("/images/glyph_school.svg");
+}
+
+.info-row.glyph-home:before {
+  background-image: url("/images/glyph_home.svg");
+}
+
+.info-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Alegreya', serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
