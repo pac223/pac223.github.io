@@ -76,6 +76,7 @@ html, .main {
 .info-header {
   text-align: center;
   font-size: 110px;
+  
   letter-spacing: 5px;
   font-family: 'Amatic SC', serif;
   white-space: nowrap;
@@ -84,13 +85,13 @@ html, .main {
   margin-bottom: 15px;
 }
 
-.social-row {
+.contact-row {
   height: 35px;
   margin-bottom: 25px;
   text-align: center;
 }
 
-.social-icon {
+.contact-icon {
   display: inline-block;
   height: 35px;
   width: 40px;
@@ -100,11 +101,11 @@ html, .main {
   cursor: pointer;
 }
 
-.social-icon:last-child {
+.contact-icon:last-child {
   margin-right: 0;
 }
 
-.social-icon:hover {
+.contact-icon:hover {
   background-color: #959398;
 }
 
